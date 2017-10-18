@@ -2,7 +2,7 @@ flags:
   pandoc-crossref:
     static: true
 ghc-options:
-  "$everything": -fPIC
+  "*": -fPIC
 extra-package-dbs: []
 packages:
 - .
