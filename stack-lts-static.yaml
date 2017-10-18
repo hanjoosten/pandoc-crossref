@@ -1,0 +1,11 @@
+flags:
+  pandoc-crossref:
+    static: true
+ghc-options:
+  "$everything": -fPIC
+extra-package-dbs: []
+packages:
+- .
+extra-deps:
+- roman-numerals-0.5.1.5
+resolver: lts-9.5
