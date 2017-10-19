@@ -1,8 +1,6 @@
 flags:
   pandoc-crossref:
     static: true
-ghc-options:
-  "*": -fPIC
 extra-package-dbs: []
 packages:
 - .

@@ -30,7 +30,7 @@ before_install:
 - travis_retry curl -L https://www.stackage.org/stack/$STACK_OS | tar xz --strip-components=1 -C ~/.local/bin
 - stack --no-terminal setup
 script:
-- stack --no-terminal test
+- stack --no-terminal --ghc-options="-fPIC" install
 deploy:
   provider: releases
   api_key:
@@ -41,5 +41,4 @@ deploy:
   on:
     tags: true
 before_deploy:
-- stack --no-terminal install
 - tar czf "$TRAVIS_BUILD_DIR/${TRAVIS_OS_NAME}-${RELEASE_FN}.tar.gz" -C "$HOME/.local/bin/" "./pandoc-crossref"
